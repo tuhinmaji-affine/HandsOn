@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://tuhinmaji/courses"
+xmltns:tns="http://tuhinmaji/courses" elementFromDefault="qualified">
+	<xs:element name="GetCourseDetailsRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="id" type="xs:int"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+		
+	</xs:element>
+	<xs:element name="GetCourseDetailsResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="CourseDetails" type="tns:CourseDetails"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+	<complexType>
+		<sequence>
+			<element name="id" tyep="xs:int"></element>
+			<element name="name" tyep="xs:string"></element>
+		</sequence>
+	</complexType>
+</xs:schema>
+<!--
+<GetCourseDetailsRequest xmlns="http://tuhinmaji/courses">
+	<id>123</id>
+</GetCourseDetailsRequest>
+
+-->
